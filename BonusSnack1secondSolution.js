@@ -4,7 +4,7 @@ function getPostTitle(id) {
         fetch(`https://dummyjson.com/posts/${id}`)
         .then((response)=>response.json())
         .then(data =>{
-            fetch(`https://dummyjson.com/users/${id}`)
+            fetch(`https://dummyjson.com/users/${data.id}`)
             .then(response => response.json())
             .then(userData=>{
                 const results={
